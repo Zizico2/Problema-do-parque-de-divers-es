@@ -6,13 +6,26 @@ import funPark.attraction.*;
 import funPark.kid.*;
 
 public class CFunPark implements FunPark {
+    private class KidIdentifier {
+        public int id;
+        public Kid kid;
 
-    Kid kid;
+        public KidIdentifier(int id, Kid kid){
+            this.id = id;
+            this.kid = kid;
+        }
+    }
 
+    private KidIdentifier kid;
 
+    private Map<Integer, Attraction> attractions;
 
     public CFunPark(int noOfAvailableAttractions, int kidId) {
-        // TODO
+        kid = new KidIdentifier(kidId, new CKid());
+        //TODO attractions = new 
+        for(int i = 0; i < noOfAvailableAttractions; i++){
+            attractions.insert(i, new CAttraction());
+        }
     }
 
     @Override
