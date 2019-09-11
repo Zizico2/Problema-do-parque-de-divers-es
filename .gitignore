@@ -1,0 +1,5 @@
+*.project
+*.classpath
+FunPark/.settings/
+FunPark/.vscode/
+FunPark/bin/
