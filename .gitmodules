@@ -1,0 +1,3 @@
+[submodule "FunPark/src/dataStructures"]
+	path = FunPark/src/dataStructures
+	url = https://gitlab.com/Zizico2/data-structures
