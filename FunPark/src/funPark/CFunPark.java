@@ -2,6 +2,7 @@ package funPark;
 
 import dataStructures.Iterator;
 import dataStructures.Map;
+import dataStructures.HashMap;
 import funPark.attraction.*;
 import funPark.kid.*;
 
@@ -22,7 +23,7 @@ public class CFunPark implements FunPark {
 
     public CFunPark(int noOfAvailableAttractions, int kidId) {
         kid = new KidIdentifier(kidId, new CKid());
-        //TODO attractions = new 
+        attractions = new HashMap<>();
         for(int i = 0; i < noOfAvailableAttractions; i++){
             attractions.insert(i, new CAttraction());
         }
