@@ -26,18 +26,18 @@ public class Main {
 	}
 
 	private static void shell(Scanner in, FunPark c) {
-		String cmd="";
+		String cmd = "";
 		
 		while (!cmd.equals("X")) {
 			cmd = in.next().trim().toUpperCase();
 			switch (cmd){
-			case "V":procAddVisitEnd(in, c); break;
-			case "T":procAddVisitIndex(in, c); break;
-			case "P":procPrintVisitedAttrs(in, c); break;
-			case "R":procRemoveVisitIndex(in, c); break;
-			case "N":procNoOfVisitedAttrs(c); break;
-			case "C":procAttrScore(in, c); break;
-			case "X":procExit(c); break;
+				case "V":procAddVisitEnd(in, c); break;
+				case "T":procAddVisitIndex(in, c); break;
+				case "P":procPrintVisitedAttrs(in, c); break;
+				case "R":procRemoveVisitIndex(in, c); break;
+				case "N":procNoOfVisitedAttrs(c); break;
+				case "C":procAttrScore(in, c); break;
+				case "X":procExit(c); break;
 			default: System.out.println("Comando invalido.");
 			}
 		}

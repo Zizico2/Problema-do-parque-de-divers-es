@@ -8,8 +8,8 @@ import funPark.kid.*;
 
 public class CFunPark implements FunPark {
     private class KidIdentifier {
-        public int id;
-        public Kid kid;
+        public final int id;
+        public final Kid kid;
 
         public KidIdentifier(int id, Kid kid){
             this.id = id;
