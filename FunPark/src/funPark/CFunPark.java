@@ -10,7 +10,6 @@ public class CFunPark implements FunPark {
     private class KidIdentifier {
         public int id;
         public Kid kid;
-
         public KidIdentifier(int id, Kid kid){
             this.id = id;
             this.kid = kid;
