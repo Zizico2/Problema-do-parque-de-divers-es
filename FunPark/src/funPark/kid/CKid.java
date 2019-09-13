@@ -12,4 +12,19 @@ public class CKid implements Kid {
     public CKid(){
         visitedAttractions = new ArrayList<>();
     }
-} 
+
+    @Override
+    public void addVisitIndex(int i, Attraction attr) {
+        visitedAttractions.add(i, attr);
+    }
+
+    @Override
+    public void addVisitEnd(Attraction attr) {
+        visitedAttractions.addLast(attr);
+    }
+
+    @Override
+    public int getNoOfVisitedAttrs() {
+        return visitedAttractions.size();
+    }
+}

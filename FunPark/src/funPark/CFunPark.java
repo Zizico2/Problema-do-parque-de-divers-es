@@ -7,22 +7,21 @@ import funPark.attraction.*;
 import funPark.kid.*;
 
 public class CFunPark implements FunPark {
-    private class KidIdentifier {
+    private class IdentifiedKid extends CKid implements Kid {
         public final int id;
-        public final Kid kid;
 
-        public KidIdentifier(int id, Kid kid){
+        public IdentifiedKid(int id){
+            super();
             this.id = id;
-            this.kid = kid;
         }
     }
 
-    private KidIdentifier kid;
+    private final Kid kid;
 
     private Map<Integer, Attraction> attractions;
 
     public CFunPark(int noOfAvailableAttractions, int kidId) {
-        kid = new KidIdentifier(kidId, new CKid());
+        kid = new IdentifiedKid(kidId);
         attractions = new HashMap<>();
         for(int i = 0; i < noOfAvailableAttractions; i++){
             attractions.insert(i, new CAttraction());
@@ -30,33 +29,35 @@ public class CFunPark implements FunPark {
     }
 
     @Override
-    public void AddVisitEnd(int attrId, int score) {
-        // TODO Auto-generated method stub
-
+    public void addVisitEnd(int attrId, int score) {
+        Attraction attraction = attractions.find(attrId);
+        
+        kid.addVisitEnd(attraction);
+        attraction.addVisit(kid, score);
     }
 
     @Override
-    public void AddVisitIndex(int i, int attrId, int score) {
-        // TODO Auto-generated method stub
-
+    public void addVisitIndex(int i, int attrId, int score) {
+        Attraction attraction = attractions.find(attrId);
+        
+        kid.addVisitIndex(i, attraction);
+        attraction.addVisit(kid, score);
     }
 
     @Override
-    public Iterator<Attraction> GetVisitedAttrs(boolean order) {
+    public Iterator<Attraction> getVisitedAttrs(boolean order) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void RemoveVisitIndex(int attrId) {
+    public void removeVisitIndex(int attrId) {
         // TODO Auto-generated method stub
-
     }
 
     @Override
     public int getNoOfVisitedAttrs() {
-        // TODO Auto-generated method stub
-        return 0;
+        return kid.getNoOfVisitedAttrs();
     }
 
     @Override

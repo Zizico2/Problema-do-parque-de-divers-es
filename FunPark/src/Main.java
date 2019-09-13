@@ -30,7 +30,7 @@ public class Main {
 		
 		while (!cmd.equals("X")) {
 			cmd = in.next().trim().toUpperCase();
-			switch (cmd){
+			switch (cmd) {
 				case "V":procAddVisitEnd(in, c); break;
 				case "T":procAddVisitIndex(in, c); break;
 				case "P":procPrintVisitedAttrs(in, c); break;
@@ -50,6 +50,7 @@ public class Main {
 	}
 
 	private static void procNoOfVisitedAttrs(FunPark c) {
+		c.getNoOfVisitedAttrs();
 	}
 
 	private static void procRemoveVisitIndex(Scanner in, FunPark c) {
@@ -59,9 +60,19 @@ public class Main {
 	}
 
 	private static void procAddVisitIndex(Scanner in, FunPark c) {
+		int index = in.nextInt();
+		int attraction_id = in.nextInt();
+		int score = in.nextInt();
+		in.nextLine();
+		
+		c.addVisitIndex(index, attraction_id, score);
 	}
 
 	private static void procAddVisitEnd(Scanner in, FunPark c) {
+		int attraction_id = in.nextInt();
+		int score = in.nextInt();
+		in.nextLine();
+		
+		c.addVisitEnd(attraction_id, score);
 	}
-
 }
