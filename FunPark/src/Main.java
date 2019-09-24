@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 import funPark.FunPark;
+import funPark.attraction.AttractionNotVisitedException;
 import funPark.CFunPark;
 import funPark.kid.InvalidItineraryException;
 
@@ -48,6 +49,14 @@ public class Main {
 	}
 
 	private static void procAttrScore(Scanner in, FunPark c) {
+		int attrId = in.nextInt();
+		in.nextLine();
+		try {
+			int highScore = c.getHighScore(attrId);
+			System.out.println(highScore);
+		} catch (AttractionNotVisitedException e) {
+			System.out.println("Diversao nao visitada.");
+		}
 	}
 
 	private static void procNoOfVisitedAttrs(FunPark c) {

@@ -2,6 +2,7 @@ package funPark;
 
 import dataStructures.Iterator;
 import funPark.attraction.Attraction;
+import funPark.attraction.AttractionNotVisitedException;
 import funPark.kid.InvalidItineraryException;
 
 public interface FunPark {
@@ -11,5 +12,5 @@ public interface FunPark {
     Iterator<Attraction> getVisitedAttrs(boolean order);
     void removeVisitIndex(int attrId);
     int getNoOfVisitedAttrs();
-    int getHighScore(int attrId);
+    int getHighScore(int attrId) throws AttractionNotVisitedException;
 } 

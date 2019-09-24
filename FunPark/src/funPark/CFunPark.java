@@ -69,8 +69,10 @@ public class CFunPark implements FunPark {
     }
 
     @Override
-    public int getHighScore(int attrId) {
-        // TODO Auto-generated method stub
-        return 0;
+    public int getHighScore(int attrId) throws AttractionNotVisitedException {
+        Attraction attr = attractions.find(attrId);
+        if (attr == null)
+            throw new AttractionNotVisitedException();
+        return attr.getHighScore();
     }
 }
