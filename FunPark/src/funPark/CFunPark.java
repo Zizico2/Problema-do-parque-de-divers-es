@@ -29,18 +29,26 @@ public class CFunPark implements FunPark {
     }
 
     @Override
+    public int getKidId(){
+        return ((IdentifiedKid)kid).id;
+    }
+
+    @Override
     public void addVisitEnd(int attrId, int score) {
         Attraction attraction = attractions.find(attrId);
-        
+
         kid.addVisitEnd(attraction);
         attraction.addVisit(kid, score);
     }
 
     @Override
-    public void addVisitIndex(int i, int attrId, int score) {
+    public void addVisitIndex(int i, int attrId, int score) throws InvalidItineraryException {
         Attraction attraction = attractions.find(attrId);
-        
-        kid.addVisitIndex(i, attraction);
+        try {
+            kid.addVisitIndex(i, attraction);
+        } catch (InvalidItineraryException e) {
+            throw e;
+        }
         attraction.addVisit(kid, score);
     }
 

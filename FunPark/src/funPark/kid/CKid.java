@@ -1,9 +1,9 @@
 package funPark.kid;
 
 import dataStructures.ArrayList;
+import dataStructures.InvalidPositionException;
 import dataStructures.List;
 import funPark.attraction.Attraction;
-import funPark.attraction.CAttraction;
 
 public class CKid implements Kid {
 
@@ -14,8 +14,12 @@ public class CKid implements Kid {
     }
 
     @Override
-    public void addVisitIndex(int i, Attraction attr) {
-        visitedAttractions.add(i, attr);
+    public void addVisitIndex(int i, Attraction attr) throws InvalidItineraryException{
+        try {
+            visitedAttractions.add(i, attr);
+        } catch (InvalidPositionException e) {
+            throw new InvalidItineraryException();
+        }
     }
 
     @Override

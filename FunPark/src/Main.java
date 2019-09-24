@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 import funPark.FunPark;
 import funPark.CFunPark;
+import funPark.kid.InvalidItineraryException;
 
 /**
  * @author AED 2019_20
@@ -50,7 +51,8 @@ public class Main {
 	}
 
 	private static void procNoOfVisitedAttrs(FunPark c) {
-		c.getNoOfVisitedAttrs();
+		int noOfVisitedAttrs = c.getNoOfVisitedAttrs();
+		System.out.println("A crianca com numero " + c.getKidId() + " realizou " + noOfVisitedAttrs + " visitas.");
 	}
 
 	private static void procRemoveVisitIndex(Scanner in, FunPark c) {
@@ -64,8 +66,11 @@ public class Main {
 		int attraction_id = in.nextInt();
 		int score = in.nextInt();
 		in.nextLine();
-		
-		c.addVisitIndex(index, attraction_id, score);
+		try {
+			c.addVisitIndex(index, attraction_id, score);	
+		} catch (InvalidItineraryException e) {
+			System.out.println("Ponto do trajeto nao valido.");
+		}
 	}
 
 	private static void procAddVisitEnd(Scanner in, FunPark c) {
