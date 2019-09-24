@@ -1,0 +1,51 @@
+Descrição breve de cada teste
+
+teste 1 - Comando v
+teste 2 - Comando T
+teste 3 - Comando T com e sem sucesso
+teste 4 - teste 1 + comando N
+teste 5 - teste 2 + comando N
+teste 6 - teste 1 + comando C
+teste 7 - teste 2 + comando C
+teste 8 - teste 6 + comando C sem sucesso
+teste 9 - teste 7 + comando C sem sucesso
+teste 10 - teste 1 + comando R
+teste 11 - teste 2 + comando R
+teste 12 - teste 3 + comando R
+teste 13 - teste 10 + comando N
+teste 14 - teste 10 + comando C com e sem sucesso
+teste 15 - teste 11 + comando C com e sem sucesso
+teste 16 - teste 10 + comando P 0
+teste 17 - teste 10 + comando P 1
+teste 18 - teste 11 + comando P 0
+teste 19 - teste 11 + comando P 1
+teste 20 - teste 1 + comando P 0
+teste 21 - teste 1 + comando P 1
+teste 22 - todos os comandos
+
+Pontos no Mooshak de cada teste (total 100 pontos)
+
+teste 1 - 5 pontos
+teste 2 - 5 pontos
+teste 3 - 3 pontos
+teste 4 - 5 pontos
+teste 5 - 5 pontos
+teste 6 - 5 pontos
+teste 7 - 5 pontos
+teste 8 - 3 pontos
+teste 9 - 3 pontos
+teste 10 - 5 pontos
+teste 11 - 5 pontos
+teste 12 - 3 pontos
+teste 13 - 5 pontos
+teste 14 - 5 pontos
+teste 15 - 5 pontos
+teste 16 - 4 pontos
+teste 17 - 4 pontos
+teste 18 - 4 pontos
+teste 19 - 4 pontos
+teste 20 - 5 pontos
+teste 21 - 4 pontos
+teste 22 - 8 pontos
+
+
